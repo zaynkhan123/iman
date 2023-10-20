@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cl</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <style>
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-item a {
+            position: relative;
+        }
+
+        .nav-item a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            top: 80%;
+            left: 0;
+            border-bottom: 1px solid #111;
+            transition: 500ms ease-out;
+        }
+
+        .nav-item a:hover::after {
+            width: 100%;
+            transition: 500ms ease-out;
+        }
+
+        .left {
+            position: relative;
+        }
+
+        .left::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            background: rgba(44, 115, 101, 0.776);
+            transition: 500ms ease-out;
+        }
+
+        .left:hover::after {
+            width: 100%;
+            transition: 500ms ease-out;
+        }
+
+        .right {
+            position: relative;
+        }
+
+        .right::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: rgba(62, 61, 67, 0.53);
+            transition: 500ms ease-out;
+        }
+
+        .right:hover::after {
+            width: 100%;
+            transition: 500ms ease-out;
+        }
+
+        .so {
+            position: relative;
+            width: 80%;
+            height: 100%;
+            background-image: url(https://assets.website-files.com/61b711f830d358f225addd55/61b72a6aa67e2a64d66d2096_hero_01.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 30px;
+        }
+
+        .so::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: "grey";
+            color: #fff;
+            font-size: 2rem;
+            font-family: voyage;
+            letter-spacing: .5rem;
+            text-transform: uppercase;
+            position: absolute;
+            top: -10%;
+            width: 100%;
+            height: 0%;
+            background: rgba(0, 0, 0, 0.53);
+            transition: 500ms ease-out;
+        }
+
+        .so:hover::after {
+            height: 110%;
+            transition: 500ms ease-out;
+        }
+
+        .fiya {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://assets.website-files.com/61b711f830d358f225addd55/61b72a662fdd3397e0ea753b_hero_02.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 30px;
+        }
+
+        .fiya::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: "o$world's";
+            color: #fff;
+            font-size: 2.5rem;
+            font-family: voyage;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: -10%;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: rgba(0, 0, 0, 0.53);
+            transition: 800ms ease-out;
+        }
+
+        .fiya:hover::after {
+            height: 110%;
+            transition: 500ms ease-out;
+        }
+
+        .haskr a {
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            color: #252222;
+            text-transform: uppercase;
+            line-height: 2.5rem;
+
+        }
+
+        .icons a {
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            color: #252222;
+            text-transform: uppercase;
+            line-height: 2.5rem;
+            margin: .5rem;
+        }
+
+        .haskr a {
+            position: relative;
+        }
+
+        .haskr a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            top: 80%;
+            left: 0;
+            border-bottom: 1px solid #111;
+            transition: 500ms ease-out;
+        }
+
+        .haskr a:hover::after {
+            width: 100%;
+            transition: 500ms ease-out;
+        }
+    </style>
+
+    <div id="main" class="container-fluid max-vh-100"
+        style="background-color: #EDE6E6; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        <nav class="navbar fixed-top" style="background-color: #EDE6E6;">
+            <div class="container" style="font-family: apple;">
+                <a class="navbar-brand" href="#">
+                    <img src="https://logos-world.net/wp-content/uploads/2021/04/Maserati-Logo.png" class="img-fluid"
+                        style="width: 5rem;" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header" style="background-color: #EDE6E6;">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="https://logos-world.net/wp-content/uploads/2021/04/Maserati-Logo.png"
+                                class="img-fluid" style="width: 5rem;" alt="">
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" style="background-color: #EDE6E6;">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-center fs-3">
+                            <li class="nav-item">
+                                <a class="nav-link active  mx-3" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-3" href="#page2">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  mx-3" href="#page4">our Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  mx-3" href="./contact.html">contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  mx-3" href="#page5">road map</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-secondary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="page1" class="container mt-4 py-5">
+            <div class="row">
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center overflow-hidden">
+                    <h1 class="mx-0 mx-lg-5 text-start lh-1 one"
+                        style="font-size: calc(100% + 3vw + 3.5vh); font-weight: 200; padding: 0px 700px; transition: 500ms ease-out;">
+                        URBANISTIC</h1>
+                    <h1 class="text-end lh-1 two"
+                        style="font-size: calc(100% + 2vw + 3.5vh); font-weight: 700; color: #252222; transition: 500ms ease-out; opacity: 0;">
+                        DEVELOPMENT</h1>
+                    <h1 class="mx-0 mx-lg-5 text-start lh-1 three"
+                        style="font-size: calc(100% + 3vw + 3.5vh); font-weight: 200; padding: 0px 700px; transition: 500ms ease-out;">
+                        INSTITUTE</h1>
+                    <h1 class="mx-5 text-end lh-1 four"
+                        style="font-size: calc(100% + 2vw + 3.5vh); font-weight: 700; color: #252222; opacity: 0; transition: 500ms ease-out;">
+                        2009</h1>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="box mx-0 mx-lg-5 overflow-hidden shadow rounded-5"
+                                style="font-family: voyage; font-weight: 800;">
+                                <div class="left" style="z-index: 99;">
+                                    <h1 class="text-start p-4">10</h1>
+                                </div>
+                                <div class="right">
+                                    <h1 class="text-end p-4">09</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex flex-column justify-content-center align-items-start overflow-hidden k"
+                            style="margin-left: -100%;">
+                            <h5 class="mt-0 mt-lg-5" style="color: rgb(108, 105, 105);">lecture:</h5>
+                            <h2>REFLEXIVITY
+                                REVISITED</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row g-0 justify-content-center">
+                        <div class="col-4 col-lg-4 d-md-block d-none pgl"
+                            style="opacity: 0; transition: 600ms ease-out;">
+                            <div class="so overflow-hidden">
+                                <img src="https://assets.website-files.com/61b711f830d358f225addd55/61b72a6aa67e2a64d66d2096_hero_01.jpg"
+                                    class="img-fluid p-2 rounded-5 mx-0 mx-lg-5"
+                                    style="height: 40rem; width: 70%; object-fit: cover; opacity: 0;" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8 deal">
+                            <div class="fiya overflow-hidden">
+                                <img src="https://assets.website-files.com/61b711f830d358f225addd55/61b72a662fdd3397e0ea753b_hero_02.jpg"
+                                    class="img-fluid p-2 rounded-5"
+                                    style="height: 40rem; width: 100%; object-fit: cover; opacity: 0;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page2" class="container max-vh-100 border-top border-primary">
+            <div class="row">
+                <div class="col-12 col-lg-5 d-flex justify-content-start">
+                    <div class="dr d-md-block d-none">
+                        <img src="https://assets.website-files.com/61b711f830d358f225addd55/61b72a6666cbc745d5c59593_ava.jpg"
+                            class="img-fluid p-0 p-lg-4 mx-5" style="border-radius: 50%;" alt="">
+                    </div>
+                    <div class="wrd d-flex flex-column justify-content-center">
+                        <h3 class="text-start mt-2">Darrell
+                            Steward</h3>
+                        <p class="text-start">Chief Architect</p>
+                    </div>
+                </div>
+                <div
+                    class="col-12 col-lg-7 d-flex flex-column justify-content-center fs-4 text-center border border-secondary rounded-5 shadow mt-1 mt-lg-3 mb-3">
+                    <p>Spaces Institute for Architec-ture and Design was founded in 2009 by the philanthropist Darrell
+                        Steward, with mission to change physical, cultural landscapes of German cities. The Institute
+                        promotes positive changes and creates new trends...✨</p>
+                </div>
+            </div>
+        </div>
+        <div id="page3" class="container max-vh-100 mt-5 position-relative">
+            <div class="row kamran position-relative" style="height: 85vh;">
+                <div class="col-12 first position-absolute" style="height: 0%; transition: 500ms ease-out;">
+                    <img src="https://assets.website-files.com/61b711f830d358f225addd55/61bcabbb00d520fba734812f_slider_01-p-1600.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 20%;" alt="">
+                </div>
+                <div class="col-12 second position-absolute" style="height: 0%; transition: 500ms ease-out;">
+                    <img src="https://assets.website-files.com/61b711f830d358f225addd55/61bcabbbf37240c48c853729_slider_02-p-1080.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 20%;" alt="">
+                </div>
+                <div class="col-12 khan position-absolute" style="height: 0%; transition: 500ms ease-out;">
+                    <img src="https://assets.website-files.com/61b711f830d358f225addd55/61bcabbb8c69b773d05c28fa_slider_03-p-1600.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 20%;" alt="">
+                </div>
+                <div class="col-12 fourth position-absolute" style="height: 0%; transition: 500ms ease-out;">
+                    <img src="https://assets.website-files.com/61b711f830d358f225addd55/61bcabbcd640fb87be01a8e7_slider_04-p-1600.jpeg"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 20%;" alt="">
+                </div>
+            </div>
+            <div class="text d-flex justify-content-center gap-2">
+                <div class="frst btn btn-outline-secondary mt-2 mb-2 rounded-5 text-capitalize">fexible</div>
+                <div class="sec btn btn-outline-secondary mt-2 mb-2 rounded-5 text-capitalize">spaces</div>
+                <div class="khan2 btn btn-outline-secondary mt-2 mb-2 rounded-5 text-capitalize">institute</div>
+                <div class="far btn btn-outline-secondary mt-2 mb-2 rounded-5 text-capitalize">modern</div>
+            </div>
+            <div class="redmi position-absolute container shadow d-md-block d-none border border-secondary"
+                style="background-color: #EDE6E6; height: 50vh; width: 20vw; top: 25%; right: 5%; border-radius: 10px;">
+                <div class="row my-2 position-relative">
+                    <div class="col-12 frst1 position-absolute" style="opacity: 1; transition: 500ms ease-out;">
+                        <img src="https://assets.website-files.com/61b711f830d358f225addd55/61b72a66c08f141b4270a9dc_advant_01-mini.jpg"
+                            class="img-thumbnail" alt="">
+                        <h4 class="text-uppercase text-center mt-4">flexible</h4>
+                        <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ipsa ipsum
+                            iusto nemo ab perspiciatis facere laboriosam, minus assumenda omnis...</p>
+                    </div>
+                    <div class="col-12 sec1 position-absolute" style="opacity: 0; transition: 500ms ease-out;">
+                        <img src="https://assets.website-files.com/61b711f830d358f225addd55/61bcabbb22703a5137412068_advant_02-mini.jpg"
+                            class="img-thumbnail" alt="">
+                        <h4 class="text-uppercase text-center mt-4">spaces</h4>
+                        <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ipsa ipsum
+                            iusto nemo ab perspiciatis facere laboriosam, minus assumenda omnis...</p>
+                    </div>
+                    <div class="col-12 khan1 position-absolute" style="opacity: 0; transition: 500ms ease-out;">
+                        <img src="https://assets.website-files.com/61b711f830d358f225addd55/61bcabbbf135aa24f4d05199_advant_03-mini.jpg"
+                            class="img-thumbnail" alt="">
+                        <h4 class="text-uppercase text-center mt-4">institute</h4>
+                        <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ipsa ipsum
+                            iusto nemo ab perspiciatis facere laboriosam, minus assumenda omnis...</p>
+                    </div>
+                    <div class="col-12 far1 position-absolute" style="opacity: 0; transition: 500ms ease-out;">
+                        <img src="https://assets.website-files.com/61b711f830d358f225addd55/61bcabbb22703a5137412068_advant_02-mini.jpg"
+                            class="img-thumbnail" alt="">
+                        <h4 class="text-uppercase text-center mt-4">modern</h4>
+                        <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ipsa ipsum
+                            iusto nemo ab perspiciatis facere laboriosam, minus assumenda omnis...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="page4"
+            class="container border-top border-primary border-bottom border-primary max-vh-100 mt-5 overflow-hidden">
+            <div class="row">
+                <div class="col-12 col-lg-8 padh" style="margin-top: -100vh; transition: 500ms ease-out;">
+                    <h1 style="font-size: calc(100% + 3vw + 3.5vh); font-weight: 700;">UDI ACTIVITY</h1>
+                    <h1 class="mx-0 mx-lg-5" style="font-size: calc(100% + 3vw + 3.5vh);"><span
+                            style="font-weight: 400;">WITH</span> EVENT$</h1>
+                </div>
+                <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
+                    <p class="text-end" style="font-size: 1.5rem;">Programs include Master of Architecture (M Arch),
+                        Specialist of Landscape Architecture, with Designer of Science in Design, was Master of Arts</p>
+                </div>
+            </div>
+            <div class="row flex-lg-nowrap justify-content-center gap-0 gap-lg-5 mt-5">
+                <div class="col-12 col-lg-4">
+                    <img src="https://assets.website-files.com/61b711f830d358f225addd55/61b72a66d16749cc29e3c621_activity_01.jpg"
+                        class="img-fluid rounded-3" alt="">
+                    <p class="fs-4 text-start mt-3"> (01.) In a leading position in the field of university
+                        architectural practice, the modern institute..</p>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <img src="https://assets.website-files.com/61b711f830d358f225addd55/61b72a664086c98aa0aab8ce_activity_02.jpg"
+                        class="img-fluid rounded-3" alt="">
+                    <p class="fs-5 text-start mt-3"> (02.) Work with a cross-section of local residents, business people
+                        and government leaders</p>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <img src="https://assets.website-files.com/61b711f830d358f225addd55/61b72a6666cbc707f4c59594_activity_03.jpg"
+                        class="img-fluid rounded-3" alt="">
+                    <p class="fs-5 text-start mt-0 mt-lg-4">THE FIRST SNAP OF GREEN IS STIRRING, THE BIRDS ARE CHIRPING
+                        AND YOU CAN SEE A SOFT CARPET OF GOLDEN FUR DRAPED</p>
+                </div>
+            </div>
+        </div>
+        <div id="page5" class="container max-vh-100">
+            <div class="row d-flex flex-nowrap justify-content-center overflow-hidden border-bottom border-primary"
+                style="gap: 15rem;">
+                <div class="col-3 text-center">
+                    <h1 class="shu"
+                        style="font-size: calc(100% + 9vw + 3.5vh); margin-left: 35vh; transition: 500ms ease-out;">2005
+                    </h1>
+                </div>
+                <div class="col-3 text-center">
+                    <h1 class="ly"
+                        style="font-size: calc(100% + 9vw + 3.5vh); margin-left: 35vh; transition: 500ms ease-out;">2010
+                    </h1>
+                </div>
+                <!-- <div class="col-3 text-center">
+                    <h1 class="free" style="font-size: calc(100% + 9vw + 3.5vh); margin-left: 65vh; transition: 500ms ease-out;">2020</h1>
+                </div> -->
+            </div>
+            <div class="row mb-5 max-vh-100 overflow-hidden">
+                <div
+                    class="dust d-flex position-relative flex-column justify-content-center align-items-center overflow-hidden gap-5">
+                    <div class="col-12 col-lg-7 mb-2 ru" style="transition: 500ms ease-out; margin-left: 0vh;">
+                        <p class="fs-4">The evening features a mix of surprises, new information about both the
+                            Council’s housing affordability strategy and the provincial government’s recent
+                            announcement, and plenty of energy and enthusiasm about action. Don’t miss the opportunity
+                            to share your housing affordability story and the ideas for a more sustainable housing
+                            industry.</p>
+                        <div class="d-flex gap-2">
+                            <div class="btn btn-outline-secondary">Building a park</div>
+                            <div class="btn btn-outline-secondary">Lounge zone</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7 love position-absolute"
+                        style="transition: 500ms ease-out; margin-top: -100vh;">
+                        <p class="fs-4">It's always good to see this kind of excitement and excitement around British
+                            Columbia housing developments. This evening is a great opportunity to see what our
+                            politicians and community leaders are working on to create a real market for affordable
+                            housing for all. Housing affordability is one of the biggest challenges facing our province
+                            and community leaders.</p>
+                        <div class="btn btn-outline-secondary">Building</div>
+                        <div class="btn btn-outline-secondary">Lounge</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page6"
+            class="border max-vh-100 border-secondary container d-flex align-items-center justify-content-center overflow-hidden">
+            <div class="container">
+                <div class="row ">
+                    <div
+                        class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-start border-end border-secondary">
+                        <h1 class="text-uppercase mx-3" style="font-family: voyage;">&paces</h1>
+                        <div class="d-flex my-5">
+                            <img src="https://logos-world.net/wp-content/uploads/2021/04/Maserati-Logo.png"
+                                class="img-fluid w-25 h-75" alt="">
+                            <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing eli.⭐</p>
+                        </div>
+                    </div>
+                    <div
+                        class="col-6 col-lg-2 d-flex flex-column align-items-center justify-content-center haskr border-top border-secondary">
+                        <a href="#page1">home</a>
+                        <a href="#page2">about us</a>
+                        <a href="./contact.html">contact</a>
+                    </div>
+                    <div
+                        class="col-6 col-lg-2 d-flex flex-column align-items-center justify-content-center haskr border-top border-secondary">
+                        <a href="#page4">our Events</a>
+                        <a href="#page5">road map</a>
+                    </div>
+                    <div
+                        class="col-12 col-lg-4 d-flex flex-column align-items-center gap-4 p-5 border-top border-secondary">
+                        <h1 class="text-uppercase text-center fs-2">newletter</h1>
+                        <input class="w-100 border border-none text-center text-capitalize p-2 rounded-3" type="text"
+                            placeholder="email">
+                        <div class="icons fs-3">
+                            <a href=""><i class="ri-twitter-line"></i></a>
+                            <a href=""><i class="ri-instagram-line"></i></a>
+                            <a href="./6264154045"><i class="ri-phone-line"></i></a>
+                            <a href=""><i class="ri-sparkling-line"></i></a>
+                            <a href=""><i class="ri-facebook-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="d-flex p-3 border-top container">
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <span class="mb-md-0 text-body-secondary fw-semibold fs-5">© 2023 Company, Inc</span>
+            </div>
+        </footer>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+            integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+            integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+
+            var first = document.querySelector(".first")
+            var frst = document.querySelector(".frst")
+            var frst1 = document.querySelector(".frst1")
+
+            var second = document.querySelector(".second")
+            var sec = document.querySelector(".sec")
+            var sec1 = document.querySelector(".sec1")
+
+            var khan = document.querySelector(".khan")
+            var khan2 = document.querySelector(".khan2")
+            var khan1 = document.querySelector(".khan1")
+
+            var fourth = document.querySelector(".fourth")
+            var far = document.querySelector(".far")
+            var far1 = document.querySelector(".far1")
+
+            frst.addEventListener("click", function () {
+                first.style.height = `100%`
+                frst1.style.opacity = `1`
+                second.style.height = `0%`
+                sec1.style.opacity = `0`
+                khan.style.height = `0%`
+                khan1.style.opacity = `0`
+                fourth.style.height = `0%`
+                far1.style.opacity = `0`
+            })
+
+            sec.addEventListener("click", function () {
+                first.style.height = `0%`
+                frst1.style.opacity = `0`
+                second.style.height = `100%`
+                sec1.style.opacity = `1`
+                khan.style.height = `0%`
+                khan1.style.opacity = `0`
+                fourth.style.height = `0%`
+                far1.style.opacity = `0`
+            })
+
+            khan2.addEventListener("click", function () {
+                first.style.height = `0%`
+                frst1.style.opacity = `0`
+                second.style.height = `0%`
+                sec1.style.opacity = `0`
+                khan.style.height = `100%`
+                khan1.style.opacity = `1`
+                fourth.style.height = `0%`
+                far1.style.opacity = `0`
+            })
+
+            far.addEventListener("click", function () {
+                first.style.height = `0%`
+                frst1.style.opacity = `0`
+                second.style.height = `0%`
+                sec1.style.opacity = `0`
+                khan.style.height = `0%`
+                khan1.style.opacity = `0`
+                fourth.style.height = `100%`
+                far1.style.opacity = `1`
+            })
+
+
+            gsap.to(".one", {
+                padding: `0px 0px`,
+                delay: 1,
+            })
+            gsap.to(".two", {
+                mx: 5,
+                opacity: `1`,
+                delay: 1,
+            })
+            gsap.to(".three", {
+                padding: `0px 30px`,
+                delay: 1,
+            })
+            gsap.to(".four", {
+                mx: 5,
+                opacity: `1`,
+                padding: `0px 30px`,
+                delay: 1,
+            })
+            gsap.to(".k", {
+                marginLeft: `0%`,
+                delay: 1,
+            })
+            gsap.to(".pgl", {
+                opacity: `1`,
+                delay: 1,
+
+            })
+
+            gsap.to(".first", {
+                height: `100%`,
+                scrollTrigger: {
+                    scroller: `html`,
+                    trigger: `#page3 .first`,
+                    scrub: 1,
+                }
+            })
+
+            gsap.to(".padh", {
+                marginTop: `0vh`,
+                scrollTrigger: {
+                    scroller: `html`,
+                    trigger: `#page4 .padh`,
+                    start: `1%`,
+                    end: `10%`,
+                    scrub: 1,
+                }
+            })
+
+            var t1 = gsap.timeline()
+
+            t1.to(".shu", {
+                marginLeft: `-300%`,
+                delay: 2,
+                scrollTrigger: {
+                    scroller: `html`,
+                    trigger: `.shu`,
+                    start: `-90%`,
+                    end: `-15%`,
+                    scrub: true
+                }
+            })
+                .to(".ru", {
+                    marginLeft: `-500%`,
+                    scrollTrigger: {
+                        scroller: `html`,
+                        trigger: `.ru`,
+                        start: `-140%`,
+                        end: `-120%`,
+                        scrub: true,
+                    }
+                })
+
+            var t2 = gsap.timeline()
+
+            t2.to(".ly", {
+                marginLeft: `-70vh`,
+                scrollTrigger: {
+                    scroller: `html`,
+                    trigger: `.ly`,
+                    start: `-70%`,
+                    end: `-60%`,
+                    scrub: true,
+                }
+            })
+                .to(".love", {
+                    marginTop: `0%`,
+                    opacity: 1,
+                    scrollTrigger: {
+                        scroller: `html`,
+                        trigger: `.love`,
+                        start: `-1%`,
+                        end: `-0%`,
+                        scrub: true,
+                    }
+                }) 
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
